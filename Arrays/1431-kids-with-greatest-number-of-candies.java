@@ -1,3 +1,4 @@
+//Priblem link: https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/description/
 class Solution {
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
 		int max = -1;
@@ -13,3 +14,4 @@ class Solution {
 		return result;       
     }
 }
+//couldn't find a more optimized solution
