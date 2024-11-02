@@ -1,6 +1,6 @@
 import java.util.*;
 
-class sortPeople {
+class sortingPeople {
     public String[] sortPeople(String[] name, int[] heights) {
         ArrayList<Integer> list = new ArrayList<>();
         HashMap<Integer, String> map = new HashMap<>();

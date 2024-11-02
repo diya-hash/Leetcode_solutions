@@ -1,7 +1,5 @@
 
 //problem link: https://leetcode.com/problems/reverse-vowels-of-a-string/description/
-import java.lang.*;
-
 public class reverseVowelsOfAString {
     public static void main(String[] args) {
         String str = "IceCreAm";
