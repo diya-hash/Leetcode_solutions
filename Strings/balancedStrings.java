@@ -1,7 +1,5 @@
 
 //problem link: https://leetcode.com/problems/split-a-string-in-balanced-strings/description/
-import java.lang.*;
-
 public class balancedStrings {
     public static void main(String[] args) {
         String s = "RLRRRLLRLL";
