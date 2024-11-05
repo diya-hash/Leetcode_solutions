@@ -22,6 +22,7 @@ public class largestLocalValues {
                 }
                 if (max > -1) {
                     System.out.println("row = " + row + ", col = " + col);
+
                     System.out.print(max + "\t");
                 }
 
