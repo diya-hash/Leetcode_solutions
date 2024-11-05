@@ -1,3 +1,5 @@
+
+//problem link: https://leetcode.com/problems/string-matching-in-an-array/
 import java.util.ArrayList;
 
 public class stringMatchingInArray {
