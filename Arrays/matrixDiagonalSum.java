@@ -12,7 +12,7 @@ public class matrixDiagonalSum {
         if (mat.length % 2 != 0)
             right -= mat[mid][mid];
         int result = left + right;
-        System.out.println("left= " + left + "right = " + right);
+        // System.out.println("left= " + left + "right = " + right);
         System.out.println(result);
     }
 }
