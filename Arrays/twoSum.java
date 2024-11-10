@@ -9,7 +9,7 @@ public class twoSum {
         int[] result = new int[2];
         HashMap<Integer, Integer> map = new HashMap<>();
 
-        // using O(logn):
+        // using O(n):
         for (int i = 0; i < nums.length; i++) {
             if (map.containsKey(target - nums[i])) {
                 result[0] = i;
