@@ -1,4 +1,6 @@
 //problem link: https://leetcode.com/problems/matrix-diagonal-sum/description/
+package Leetcode_solutions.Arrays;
+
 public class matrixDiagonalSum {
     public static void main(String[] args) {
         int[][] mat = { { 5 } };

@@ -1,5 +1,7 @@
 
 //problem link: https://leetcode.com/problems/two-sum/submissions/1448936680/
+package Leetcode_solutions.Blind75.Array;
+
 import java.util.*;
 
 public class twoSum {

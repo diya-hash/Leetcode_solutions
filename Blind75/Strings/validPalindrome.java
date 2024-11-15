@@ -1,3 +1,5 @@
+package Leetcode_solutions.Blind75.Strings;
+
 class validPalindrome {
 	public boolean isPalindrome(String s) {
 		String result = "";

@@ -1,6 +1,8 @@
+
+//problem link: https://leetcode.com/problems/missing-number/submissions/1449894453/
+package Leetcode_solutions.Arrays;
+
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
 
 public class missingNumber {
     public static void main(String[] args) {

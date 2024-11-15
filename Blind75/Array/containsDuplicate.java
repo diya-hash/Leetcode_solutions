@@ -1,5 +1,5 @@
 
-package Leetcode_solutions.Arrays;
+package Leetcode_solutions.Blind75.Array;
 
 import java.util.*;
 
