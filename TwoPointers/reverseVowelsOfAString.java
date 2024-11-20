@@ -1,3 +1,4 @@
+package Leetcode_solutions.TwoPointers;
 
 //problem link: https://leetcode.com/problems/reverse-vowels-of-a-string/description/
 public class reverseVowelsOfAString {
