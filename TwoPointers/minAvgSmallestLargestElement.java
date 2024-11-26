@@ -1,6 +1,5 @@
 package Leetcode_solutions.TwoPointers;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class minAvgSmallestLargestElement {
