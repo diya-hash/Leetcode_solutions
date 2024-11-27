@@ -11,13 +11,15 @@ public class reverseVowelsOfAString {
     // return ch;
     // }
 
-    public static String toString(char[] arr) {
-        String s = "";
-        for (int i = 0; i < arr.length; i++) {
-            s += arr[i];
-        }
-        return s;
-    }
+    // removed to optimize code and use built in function to convert char array to
+    // string this change significantly improved time complexity
+    // public static String toString(char[] arr) {
+    // String s = "";
+    // for (int i = 0; i < arr.length; i++) {
+    // s += arr[i];
+    // }
+    // return s;
+    // }
 
     public static boolean isVowel(char ch) {
         if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'O' || ch == 'U') {
@@ -27,6 +29,12 @@ public class reverseVowelsOfAString {
         } else {
             return false;
         }
+        // another way to check if char is vowel or not
+        // boolean[] isVowel = new boolean[128];
+        // for (char v : "aeiuoAEIOU".toCharArray()) {
+        // isVowel[v] = true;
+        // }
+        // return isVowel[ch];
     }
 
     public static void main(String[] args) {
@@ -36,19 +44,20 @@ public class reverseVowelsOfAString {
         int right = str.length() - 1;
 
         while (left < right) {
+            while (left < right && !isVowel(ch[left])) {
+                left++;
+            }
+            while (left < right && !isVowel(ch[right])) {
+                right--;
+            }
             if (isVowel(ch[right]) && isVowel(ch[left])) {
                 char temp = ch[left];
                 ch[left] = ch[right];
                 ch[right] = temp;
                 left++;
                 right--;
-            } else if (!isVowel(ch[right])) {
-                right--;
-            } else if (!isVowel(ch[left])) {
-                left++;
             }
         }
-        str = toString(ch);
-        System.out.println(str);
+        System.out.println(String.valueOf(ch));
     }
 }
