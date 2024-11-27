@@ -2,31 +2,53 @@ package Leetcode_solutions.TwoPointers;
 
 //problem link: https://leetcode.com/problems/reverse-vowels-of-a-string/description/
 public class reverseVowelsOfAString {
+
+    // public static char[] swap(String str, int i, int j) {
+    // char[] ch = str.toCharArray();
+    // char temp = ch[i];
+    // ch[i] = ch[j];
+    // ch[j] = temp;
+    // return ch;
+    // }
+
+    public static String toString(char[] arr) {
+        String s = "";
+        for (int i = 0; i < arr.length; i++) {
+            s += arr[i];
+        }
+        return s;
+    }
+
+    public static boolean isVowel(char ch) {
+        if (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'O' || ch == 'U') {
+            return true;
+        } else if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public static void main(String[] args) {
         String str = "IceCreAm";
-        StringBuilder s = new StringBuilder(str);
+        char[] ch = str.toCharArray();
         int left = 0;
         int right = str.length() - 1;
 
         while (left < right) {
-            System.out.println("at first right = " + right);
-            System.out.println("at first left = " + left);
-            if (str.charAt(left) != 'I' || str.charAt(left) != 'e' || str.charAt(left) != 'A') {
+            if (isVowel(ch[right]) && isVowel(ch[left])) {
+                char temp = ch[left];
+                ch[left] = ch[right];
+                ch[right] = temp;
+                left++;
+                right--;
+            } else if (!isVowel(ch[right])) {
+                right--;
+            } else if (!isVowel(ch[left])) {
                 left++;
             }
-            if (str.charAt(right) != 'I' || str.charAt(right) != 'e' || str.charAt(right) != 'A') {
-                right--;
-
-            }
-            System.out.println("right = " + right);
-            System.out.println("left = " + left);
-            char temp = s.charAt(left);
-            s.insert(left, s.charAt(right));
-            s.insert(left, temp);
-
         }
-        str = s.toString();
+        str = toString(ch);
         System.out.println(str);
-
     }
 }
