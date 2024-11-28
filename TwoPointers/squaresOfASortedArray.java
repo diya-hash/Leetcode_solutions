@@ -96,5 +96,7 @@ public class squaresOfASortedArray {
 
     }
 }
-// problem link:unsolved
-// https://leetcode.com/problems/squares-of-a-sorted-array/description/
+// problem
+// link:https://leetcode.com/problems/squares-of-a-sorted-array/description/
+// Solution post:
+// https://leetcode.com/problems/squares-of-a-sorted-array/solutions/6092242/java-solution-beats-100-two-pointer-solution
