@@ -24,3 +24,7 @@ Blind75 problems: https://leetcode.com/discuss/general-discussion/460599/blind-7
 4. Substrings of Size Three with Distinct Characters: https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/description/
 
 - Solution post: https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters/solutions/5136773/beginner-friendly-sliding-window-technique
+
+5. Squares of a Sorted Array:https://leetcode.com/problems/squares-of-a-sorted-array/description/
+
+- Solution: https://leetcode.com/problems/squares-of-a-sorted-array/solutions/6092242/java-solution-beats-100-two-pointer-solution
