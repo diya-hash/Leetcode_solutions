@@ -6,26 +6,29 @@ public class partitionArrByThePivot {
     public static void main(String[] args) {
         int[] nums = { 9, 12, 5, 10, 14, 3, 10 };
         int pivot = 10;
-        ArrayList<Integer> arr = new ArrayList<>();
-
-        for (int i = 0; i < nums.length; i++) {
+        int[] arr = new int[nums.length];
+        int l = nums.length;
+        int index = 0;
+        for (int i = 0; i < l; i++) {
             if (nums[i] < pivot) {
-                arr.add(nums[i]);
+                arr[index] = nums[i];
+                index++;
             }
         }
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < l; i++) {
             if (nums[i] == pivot) {
-                arr.add(nums[i]);
+                arr[index] = nums[i];
+                index++;
             }
         }
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < l; i++) {
             if (nums[i] > pivot) {
-                arr.add(nums[i]);
+                arr[index] = nums[i];
+                index++;
             }
         }
-        for (int i = 0; i < nums.length; i++) {
-            nums[i] = arr.get(i);
-            System.out.print(nums[i] + "\t");
+        for (int i = 0; i < l; i++) {
+            System.out.print(arr[i] + "\t");
         }
     }
 }
