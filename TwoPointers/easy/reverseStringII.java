@@ -1,3 +1,4 @@
+package easy;
 
 public class reverseStringII {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Leetcode_solutions.TwoPointers;
+package easy;
 
 public class removeDupsFromSortedArrll {
     public static void main(String[] args) {

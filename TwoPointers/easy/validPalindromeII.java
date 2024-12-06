@@ -1,3 +1,5 @@
+package easy;
+
 public class validPalindromeII {
 
     public static void main(String[] args) {

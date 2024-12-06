@@ -1,4 +1,4 @@
-package Leetcode_solutions.TwoPointers;
+package easy;
 
 import java.util.*;
 

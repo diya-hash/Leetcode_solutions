@@ -1,4 +1,4 @@
-package Leetcode_solutions.TwoPointers;
+package easy;
 
 public class flippingAnImage {
     public static void main(String[] args) {

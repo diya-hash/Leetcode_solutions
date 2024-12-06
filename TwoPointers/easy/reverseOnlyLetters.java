@@ -1,3 +1,5 @@
+package easy;
+
 public class reverseOnlyLetters {
     public static void main(String[] args) {
         String s = "7_28]";

@@ -1,4 +1,4 @@
-package Leetcode_solutions.TwoPointers;
+package easy;
 
 public class sortArrayByParityII {
     public static void main(String[] args) {
