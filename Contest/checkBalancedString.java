@@ -1,3 +1,5 @@
+package Leetcode_solutions.Contest;
+
 public class checkBalancedString {
     public static void main(String[] args) {
         String num = "24123";

@@ -1,3 +1,5 @@
+package Leetcode_solutions.Contest;
+
 import java.util.*;
 
 public class adjacentSubarrayDetection1 {
