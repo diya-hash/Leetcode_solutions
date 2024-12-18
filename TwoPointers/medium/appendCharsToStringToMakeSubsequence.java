@@ -1,33 +1,27 @@
 public class appendCharsToStringToMakeSubsequence {
     public static void main(String[] args) {
-        String s = "acoding";
-        String t = "a";
+        String s = "a";
+        String t = "acoaching";
 
         int left = 0;
         int right = 0;
-        int count = 0;
-
-        while (left < s.length() || right < t.length()) {
+        int n = s.length();
+        int m = t.length();
+        while (right < m) {
             if (s.charAt(left) == t.charAt(right)) {
                 left++;
                 right++;
-                if (right == t.length()) {
-                    break;
-                } else if (left == s.length()) {
+                if (left == n) {
                     break;
                 }
-            } else if (s.charAt(left) != t.charAt(right)) {
+            } else {
                 left++;
-                if (left == s.length()) {
+                if (left == n) {
                     break;
                 }
             }
         }
-
-        if (right < t.length()) {
-            s += t.substring(right, t.length());
-            count += t.length() - right;
-        }
-        System.out.println(s + " " + count);
+        int count = m - right;
+        System.out.println(count);
     }
 }
