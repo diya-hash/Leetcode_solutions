@@ -11,7 +11,6 @@ public class longestNiceSubstring {
         int max = -10;
         String result = "";
 
-        System.out.println(upper.equals(lower));
         for (int i = 0; i < n; i++) {
             String str = "";
             int count = 0;
@@ -21,9 +20,7 @@ public class longestNiceSubstring {
                 if (s.charAt(j) >= 'A' && s.charAt(j) <= 'Z') {
                     int num = (int) s.charAt(j) - 'A';
                     upper.add(num);
-                }
-
-                else if (s.charAt(j) >= 'a' && s.charAt(j) <= 'z') {
+                } else if (s.charAt(j) >= 'a' && s.charAt(j) <= 'z') {
                     int num = (int) s.charAt(j) - 'a';
                     lower.add(num);
                 }
@@ -32,12 +29,9 @@ public class longestNiceSubstring {
                 if (count > max && upper.equals(lower)) {
                     max = count;
                     result = str;
-
                 }
             }
-
         }
         System.out.println(result + " " + max);
-
     }
 }
