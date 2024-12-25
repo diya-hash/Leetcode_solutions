@@ -7,32 +7,26 @@ public class minRecolorsToGetKBlackBlocks {
         String blocks = "WWBBBWBBBBBWWBWWWB";
         int k = 16;
         int n = blocks.length();
-        int min = 10000000;
-        int count = 0;
-        int index = 0;
-        if (n <= k) {
-            for (int j = 0; j < n; j++) {
-                if (blocks.charAt(j) == 'W') {
-                    count++;
-                }
-            }
-            min = count;
-        } else {
-            for (int i = 0; i <= n - k; i++) {
-                count = 0;
-                for (int j = i; j < i + k; j++) {
-                    if (blocks.charAt(j) == 'W') {
-                        count++;
-                    }
-                }
-                System.out.println(count + " " + index);
-                if (count < min) {
-                    min = count;
-                    index = i;
-                }
-            }
-        }
+        int min = 0;
+        int left = 0;
+        int right = left + k;
 
-        System.out.println("answer = " + min + " " + index);
+        for (int i = 0; i < k; i++) {
+            if (blocks.charAt(i) == 'W')
+                min++;
+        }
+        int localMin = min;
+        while (right < n) {
+            if (blocks.charAt(right) == 'W')
+                localMin++;
+            if (blocks.charAt(left) == 'W')
+                localMin--;
+            left++;
+            right++;
+
+            if (localMin < min)
+                min = localMin;
+        }
+        System.out.println("answer = " + min);
     }
 }
