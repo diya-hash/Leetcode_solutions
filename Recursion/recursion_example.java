@@ -46,7 +46,15 @@ public class recursion_example {
             System.out.println(s.substring(0, s.length() - 1));
             return s.charAt(s.length() - 1) + reverseString(s.substring(0, s.length() - 1));
         }
+    }
 
+    public static String findBinary(int n, String result) {
+        if (n == 0)
+            return result;
+        else {
+            result = n % 2 + result;
+            return findBinary(n / 2, result);
+        }
     }
 
     public static void main(String[] args) {
@@ -60,5 +68,6 @@ public class recursion_example {
         boolean isPalindrome = checkPalindrome("racecar");
         System.out.println(isPalindrome);
         System.out.println(reverseString("hello"));
+        System.out.println(findBinary(233, ""));
     }
 }
