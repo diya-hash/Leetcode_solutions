@@ -57,6 +57,21 @@ public class recursion_example {
         }
     }
 
+    public static boolean binarySearch(int[] arr, int left, int right, int x) {
+        System.out.println("left = " + left + " right = " + right);
+        if (left > right)
+            return false;
+        int mid = (left + right) / 2;
+        // System.out.println("left = " + left + " right = " + right + " mid = " + mid);
+        if (arr[mid] > x) {
+            return binarySearch(arr, left, mid - 1, x);
+        } else if (arr[mid] < x) {
+            return binarySearch(arr, mid + 1, right, x);
+        } else {
+            return true;
+        }
+    }
+
     public static void main(String[] args) {
         int n = 5;
         int sum_output = sum(n);
@@ -69,5 +84,7 @@ public class recursion_example {
         System.out.println(isPalindrome);
         System.out.println(reverseString("hello"));
         System.out.println(findBinary(233, ""));
+        int[] arr = { -1, 0, 1, 2, 3, 4, 7, 9, 10, 20 };
+        System.out.println(binarySearch(arr, 0, arr.length - 1, 11));
     }
 }
