@@ -7,14 +7,26 @@ import java.util.HashSet;
 public class thirdMaxNumber {
     public static void main(String[] args) {
         int[] nums = { 1, 2147483647, -2147483648 };
-        HashSet<Integer> set = new HashSet<>();
+        long max = Long.MIN_VALUE;
+        long sMax = Long.MIN_VALUE;
+        long tMax = Long.MIN_VALUE;
+
         for (int i : nums) {
-            set.add(i);
+            if (i > max) {
+                sMax = max;
+                tMax = sMax;
+                max = i;
+            } else if (i > sMax) {
+                tMax = sMax;
+                sMax = i;
+            } else {
+                tMax = i;
+            }
         }
-        if (set.size() >= 3) {
-            set.remove(Collections.max(set));
-            set.remove(Collections.max(set));
+        if (tMax == Long.MIN_VALUE) {
+            System.out.println(max);
+        } else {
+            System.out.println(tMax);
         }
-        System.out.println(Collections.max(set));
     }
 }
