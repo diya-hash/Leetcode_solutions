@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class intersectionOfTwoArrsII {
@@ -6,48 +7,28 @@ public class intersectionOfTwoArrsII {
         int[] nums1 = { 1, 2, 2, 1 };
         int[] nums2 = { 2, 1 };
 
-        HashMap<Integer, Integer> map1 = new HashMap<>();
-        HashMap<Integer, Integer> map2 = new HashMap<>();
-        ArrayList<Integer> list = new ArrayList<>();
-        int len = 0;
-
-        for (int i = 0; i < nums1.length; i++) {
-            if (map1.containsKey(nums1[i])) {
-                map1.put(nums1[i], map1.get(nums1[i]) + 1);
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        int l1 = nums1.length;
+        int l2 = nums2.length;
+        while (i < l1 && j < l2) {
+            if (nums1[i] < nums2[j]) {
+                i++;
+            } else if (nums1[i] > nums2[j]) {
+                j++;
             } else {
-                map1.put(nums1[i], 1);
+                nums1[k] = nums2[j];
+                i++;
+                j++;
+                k++;
             }
         }
-        for (int i = 0; i < nums2.length; i++) {
-            if (map2.containsKey(nums2[i])) {
-                map2.put(nums2[i], map2.get(nums2[i]) + 1);
-            } else {
-                map2.put(nums2[i], 1);
-            }
+        int[] result = Arrays.copyOfRange(nums1, 0, k);
+        for (int n : result) {
+            System.out.print(n + " ");
         }
-
-        if (map1.size() <= map2.size()) {
-            map1.forEach(
-                    (key, value) -> {
-                        if (map2.containsKey(key)) {
-                            for (int i = 0; i < Math.min(map2.get(key), map1.get(key)); i++) {
-                                list.add(key);
-                            }
-                        }
-                    });
-        } else {
-            map2.forEach(
-                    (key, value) -> {
-                        if (map1.containsKey(key)) {
-                            for (int i = 0; i < Math.min(map2.get(key), map1.get(key)); i++) {
-                                list.add(key);
-                            }
-                        }
-                    });
-        }
-
-        int[] array = new int[list.size()];
-        for (int i = 0; i < list.size(); i++)
-            array[i] = list.get(i);
     }
 }
