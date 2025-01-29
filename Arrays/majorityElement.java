@@ -1,22 +1,23 @@
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class majorityElement {
     public static void main(String[] args) {
-        int[] nums = { 3, 2, 3, 2 };
-        int count = 0;
-        int candidate = 0;
+        int[] nums = { 3, 2, 3 };
 
-        for (int i : nums) {
-            if (count == 0) {
-                candidate = i;
-            }
-            if (candidate == i) {
-                count++;
+        int result = 0;
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (map.containsKey(nums[i])) {
+                map.put(nums[i], map.get(nums[i]) + 1);
             } else {
-                count--;
+                map.put(nums[i], 1);
             }
-            System.out.println(i + ": candidate = " + candidate + " count = " + count);
+            if (map.get(nums[i]) > nums.length / 2) {
+                result = nums[i];
+                break;
+            }
         }
-        System.out.println(candidate);
+        System.out.println(result);
     }
 }
