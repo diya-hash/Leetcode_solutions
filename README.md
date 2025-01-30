@@ -7,6 +7,8 @@ Find my Leetcode solution here: https://leetcode.com/u/s_diya/
 
 Blind75 problems: https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions
 
+String problems: https://leetcode.com/discuss/interview-question/2001789/collections-of-important-string-questions-pattern
+
 # Problems solved that beat 100%
 
 1. Merge Sorted Arrays: https://leetcode.com/problems/merge-sorted-array/description/
