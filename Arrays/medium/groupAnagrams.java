@@ -20,7 +20,6 @@ public class groupAnagrams {
             }
             map.get(sortedWord).add(word);
         }
-
         System.out.println(map.values());
     }
 }
