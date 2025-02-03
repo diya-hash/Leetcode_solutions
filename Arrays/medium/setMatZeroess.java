@@ -24,12 +24,10 @@ class setMatZeroess {
             for (int j = 0; j < matrix[i].length; j++) {
                 if (col.contains(j) || row.contains(i)) {
                     matrix[i][j] = 0;
-                    // System.out.println("i = " + i + " j = " + j);
                 }
                 System.out.print(matrix[i][j] + " ");
             }
             System.out.println("");
         }
-
     }
 }
